@@ -3,18 +3,16 @@ var url = require('url')
 var tough = require('tough-cookie')
 
 
-exports.Request = (cookie, redirect) => ({options}) => {
+exports.Request = (cookie) => ({options}) => {
 
   if (cookie && !cookie.store) {
     cookie.store = new tough.CookieJar(undefined, {looseMode: true})
   }
 
-  if (!redirect || !redirect.followed) {
+  if (cookie && cookie.header === undefined) {
     var header = Object.keys(options.headers)
       .find((name) => name.toLowerCase() === 'cookie')
-    if (header) {
-      cookie.header = options.headers[header]
-    }
+    cookie.header = header ? options.headers[header] : false
   }
 
   var uri = url.parse(
