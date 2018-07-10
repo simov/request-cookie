@@ -1,0 +1,51 @@
+{
+  "name": "request-cookie",
+  "version": "0.0.0",
+  "description": "Cookie store for request-compose",
+  "keywords": [
+    "cookie"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/simov/request-cookie",
+  "author": "Simeon Velichkov <simeonvelichkov@gmail.com> (https://simov.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simov/request-cookie.git"
+  },
+  "dependencies": {
+    "tough-cookie": "^2.4.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.2",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.2.0",
+    "request-compose": "0.0.19",
+    "request-logs": "0.0.5"
+  },
+  "bin": {},
+  "main": "./build/index.js",
+  "files": [
+    "build/index.js",
+    "build/mw.js",
+    "index.js",
+    "mw.js",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "v=$(node -e \"console.log(process.version.split('.')[0].slice(1))\") && if [ $v -ge 8 ]; then p=\"test\"; else p=\"build/test\"; fi && mocha $p --recursive",
+    "test:cov": "istanbul cover _mocha -- --recursive",
+    "build:test": "babel test --out-dir build/test",
+    "build:main": "babel *.js --out-dir build",
+    "build": "rm -rf build/ && mkdir -p build && npm run build:test && npm run build:main",
+    "prepublish": "npm run build"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
