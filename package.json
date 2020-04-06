@@ -1,6 +1,6 @@
 {
   "name": "request-cookie",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Cookie store for request-compose",
   "keywords": [
     "cookie"
