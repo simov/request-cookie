@@ -1,9 +1,9 @@
 
 # request-cookie
 
-[![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
+[![npm-version]][npm] [![test-ci-img]][test-ci-url] [![test-cov-img]][test-cov-url] [![snyk-vulnerabilities]][snyk]
 
-> Cookie store for [request-compose]
+> _Cookie store for [request-compose]_
 
 ```js
 var compose = require('request-compose')
@@ -21,14 +21,14 @@ var request = compose.client
 })()
 ```
 
-  [npm-version]: https://img.shields.io/npm/v/request-cookie.svg?style=flat-square (NPM Package Version)
-  [travis-ci]: https://img.shields.io/travis/simov/request-cookie/master.svg?style=flat-square (Build Status - Travis CI)
-  [coveralls-status]: https://img.shields.io/coveralls/simov/request-cookie.svg?style=flat-square (Test Coverage - Coveralls)
-  [codecov-status]: https://img.shields.io/codecov/c/github/simov/request-cookie.svg?style=flat-square (Test Coverage - Codecov)
+  [npm-version]: https://img.shields.io/npm/v/request-cookie.svg?style=flat-square (NPM Version)
+  [test-ci-img]: https://img.shields.io/travis/simov/request-cookie/master.svg?style=flat-square (Build Status)
+  [test-cov-img]: https://img.shields.io/coveralls/simov/request-cookie.svg?style=flat-square (Test Coverage)
+  [snyk-vulnerabilities]: https://img.shields.io/snyk/vulnerabilities/npm/request-cookie.svg?style=flat-square (Vulnerabilities)
 
   [npm]: https://www.npmjs.com/package/request-cookie
-  [travis]: https://travis-ci.org/simov/request-cookie
-  [coveralls]: https://coveralls.io/github/simov/request-cookie
-  [codecov]: https://codecov.io/github/simov/request-cookie?branch=master
+  [test-ci-url]: https://github.com/simov/request-cookie/actions/workflows/test.yml
+  [test-cov-url]: https://coveralls.io/r/simov/request-cookie?branch=master
+  [snyk]: https://snyk.io/test/npm/request-cookie
 
   [request-compose]: https://www.npmjs.com/package/request-compose
