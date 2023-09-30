@@ -20,7 +20,7 @@ exports.Request = (cookie) => ({options}) => {
       + (options.port ? `:${options.port}` : '')
   )
 
-  var cookies = cookie.store.getCookieStringSync(uri)
+  var cookies = cookie.store.getCookieStringSync(uri.href)
 
   if (cookies && cookies.length) {
     options.headers.cookie =
